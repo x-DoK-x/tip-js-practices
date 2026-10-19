@@ -1,0 +1,23 @@
+"use strict";
+
+// Задание 5. Исправленная версия программы.
+// Исходный вариант (сохранён в истории Git и описан в отчёте) складывал строки
+// и останавливал цикл раньше времени: "3" + "2" давало "32", а условие
+// taskNumber < 4 не включало четвёртую задачу.
+const plannedText = "8";
+const completedText = "3";
+const additionalText = "2";
+
+const completedTotal = Number(completedText) + Number(additionalText);
+const remainingTasks = Number(plannedText) - completedTotal;
+
+console.log("Выполнено:", completedTotal);
+console.log("Осталось:", remainingTasks);
+
+let controlSum = 0;
+
+for (let taskNumber = 1; taskNumber <= 4; taskNumber += 1) {
+  controlSum += taskNumber;
+}
+
+console.log("Контрольная сумма:", controlSum);
